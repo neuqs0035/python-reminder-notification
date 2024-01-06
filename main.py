@@ -8,6 +8,7 @@ def notify(event_name : str):
 
         title = "Reminder",
         message = event_name,
+        app_icon = "reminder.ico",
         timeout = 10
     )
 
