@@ -2,6 +2,14 @@ from datetime import datetime
 from plyer import notification
 from time import sleep
 
+def notify(event_name : str):
+
+    notification.notify(
+
+        title = "Reminder",
+        message = event_name,
+        timeout = 10
+    )
 
 while True:
 
@@ -34,6 +42,6 @@ while True:
 
                     if current_time[1] == reminder_time[1]:
 
-                        print("matched")
+                        notify(reminder_details[0])
 
                         sleep(20)
